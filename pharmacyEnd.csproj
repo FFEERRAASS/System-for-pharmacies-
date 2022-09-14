@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7615CF99-D499-4DBF-ABEC-D6541B74AFAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pharmacyEnd</RootNamespace>
+    <AssemblyName>pharmacyEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="barcodeScanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="barcodeScanning.Designer.cs">
+      <DependentUpon>barcodeScanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="canRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="canRate.Designer.cs">
+      <DependentUpon>canRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database11DataSet.cs">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database11DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbtestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbtestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Electronic Payment Gateway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronic Payment Gateway.Designer.cs">
+      <DependentUpon>Electronic Payment Gateway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="first.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="first.Designer.cs">
+      <DependentUpon>first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="firstAid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="firstAid.Designer.cs">
+      <DependentUpon>firstAid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hair.Designer.cs">
+      <DependentUpon>hair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicalneedles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicalneedles.Designer.cs">
+      <DependentUpon>medicalneedles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="numbersHos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="numbersHos.Designer.cs">
+      <DependentUpon>numbersHos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="okorCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="okorCancel.Designer.cs">
+      <DependentUpon>okorCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phDataSet.cs">
+      <DependentUpon>phDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="phDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prescription.Designer.cs">
+      <DependentUpon>prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rate.Designer.cs">
+      <DependentUpon>Rate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SISnum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SISnum.Designer.cs">
+      <DependentUpon>SISnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="without.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="without.Designer.cs">
+      <DependentUpon>without.cs</DependentUpon>
+    </Compile>
+    <Compile Include="workTimeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>workTimeDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="barcodeScanning.resx">
+      <DependentUpon>barcodeScanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="canRate.resx">
+      <DependentUpon>canRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronic Payment Gateway.resx">
+      <DependentUpon>Electronic Payment Gateway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first.resx">
+      <DependentUpon>first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firstAid.resx">
+      <DependentUpon>firstAid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hair.resx">
+      <DependentUpon>hair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicalneedles.resx">
+      <DependentUpon>medicalneedles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="numbersHos.resx">
+      <DependentUpon>numbersHos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="okorCancel.resx">
+      <DependentUpon>okorCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prescription.resx">
+      <DependentUpon>prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rate.resx">
+      <DependentUpon>Rate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SISnum.resx">
+      <DependentUpon>SISnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="without.resx">
+      <DependentUpon>without.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Database11DataSet.xsc">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database11DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database11DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database11DataSet.xss">
+      <DependentUpon>Database11DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbtestDataSet.xsc">
+      <DependentUpon>dbtestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbtestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbtestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbtestDataSet.xss">
+      <DependentUpon>dbtestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="phDataSet.xsc">
+      <DependentUpon>phDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="phDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phDataSet.xss">
+      <DependentUpon>phDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="workTimeDataSet.xsc">
+      <DependentUpon>workTimeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="workTimeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>workTimeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="workTimeDataSet.xss">
+      <DependentUpon>workTimeDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-935679.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbtest.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\622848 %281%292.png" />
+    <None Include="Resources\e2042c1c6e29a24afe1662c49783ff671.png" />
+    <None Include="Resources\423720c364d3e60c78490b5ce7aaf9d6.png" />
+    <None Include="Resources\e9580162bf7c44b887cf9433bc1d6d6c.png" />
+    <None Include="Resources\e2042c1c6e29a24afe1662c49783ff67.png" />
+    <None Include="Resources\54bafbf4c47ebb12d8d095afeeed9523.png" />
+    <None Include="Resources\5c3cff38200760c1a147e1793d1fa506.png" />
+    <None Include="Resources\97ebd1eaaf5cef1f23944e99ba7e1f0e.png" />
+    <None Include="Resources\169837 %281%29.png" />
+    <None Include="Resources\hospital-building-vector-icon-isolated-260nw-547709530.png" />
+    <None Include="Resources\single-flat-close-icon-icon-with-long-shadow-vector-2715630.png" />
+    <None Include="Resources\depositphotos_107355550-stock-illustration-syringe-icon-illustration-design.png" />
+    <None Include="Resources\injection-outline-icon-free-vector.png" />
+    <None Include="Resources\qrcode_20231008_ %281%29.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\353-3532433_payment-gateway-payment-gateways-icon-png-transparent-png %281%29.png" />
+    <None Include="Resources\cb254e5bb9a0357ddbf14be4712614fe.png" />
+    <None Include="Resources\cb254e5bb9a0357ddbf14be4712614fe.jpg" />
+    <None Include="Resources\2001.png" />
+    <None Include="Resources\collection-red-cross-clipart1.png" />
+    <None Include="Resources\lav,u %281%291.png" />
+    <None Include="Resources\collection-red-cross-clipart.png" />
+    <None Include="Resources\تصميم بدون عنوان %281%29.png" />
+    <None Include="Resources\lav,u %281%29.png" />
+    <None Include="Resources\Screenshotjh %282%29.png" />
+    <None Include="Resources\43a3d843e276e545124d020182f5f8d6.png" />
+    <None Include="Resources\43a3d843e276e545124d020182f5f8d6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SpeechLib">
+      <Guid>{C866CA3A-32F7-11D2-9602-00C04F8EE628}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
